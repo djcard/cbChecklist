@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkcbChecklist=self.webpackChunkcbChecklist||[]).push([[1682],{1682:function(t,n,e){e.r(n);e(2791);var c=e(184);n.default=function(t){var n,e=t.bgcolor?t.bgcolor:"white",o=null!==(n=t.content)&&void 0!==n&&n.content?t.content.content:"",l=t.fontSize?t.fontSize:"14pt";return(0,c.jsx)("div",{className:"blogInsert",style:{fontSize:l,padding:"16px",background:e,width:"100%"},dangerouslySetInnerHTML:{__html:o}})}}}]);
+//# sourceMappingURL=1682.1790aa02.chunk.js.map

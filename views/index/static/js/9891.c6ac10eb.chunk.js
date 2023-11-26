@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkcbChecklist=self.webpackChunkcbChecklist||[]).push([[9891],{9891:function(e,l,c){c.r(l);c(2791);var i=c(184);l.default=function(e){return(0,i.jsx)("svg",{className:"bi bi-check",width:"1em",height:"1em",viewBox:"0 0 16 16",fill:"currentColor",xmlns:"http://www.w3.org/2000/svg",id:"checkmark",children:(0,i.jsx)("path",{fillRule:"evenodd",d:"M13.854 3.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3.5-3.5a.5.5 0 11.708-.708L6.5 10.293l6.646-6.647a.5.5 0 01.708 0z",clipRule:"evenodd"})})}}}]);
+//# sourceMappingURL=9891.c6ac10eb.chunk.js.map

@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkcbChecklist=self.webpackChunkcbChecklist||[]).push([[9437,6017],{9437:function(e,t,n){n.r(t);n(2791);var s=n(4204),u=n(6017),i=n(184),c={group:"threeAmigos",key:"key1",content:(0,i.jsx)(u.default,{})};t.default=function(){return(0,i.jsxs)("div",{children:[(0,i.jsx)("div",{}),(0,i.jsx)(s.default,{details:c})]})}},6017:function(e,t,n){n.r(t);n(2791);var s=n(184);t.default=function(){return(0,s.jsx)("div",{id:"testComponent",children:"Mounted"})}}}]);
+//# sourceMappingURL=9437.59044056.chunk.js.map

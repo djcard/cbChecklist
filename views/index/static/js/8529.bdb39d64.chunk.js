@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkcbChecklist=self.webpackChunkcbChecklist||[]).push([[8529],{8529:function(i,n,e){e.r(n);var t=e(2791),s=e(7625),d=e(8026),c=e(9174),u=e(184);n.default=function(){return(0,t.useEffect)((function(){d.default.dispatch((0,c.updateTesting)({testDimensions:(0,s.getWindowDimensions)(),windowWidth:window.innerWidth,windowHeight:window.innerHeight}))}),[]),(0,u.jsx)("div",{children:(0,u.jsx)("div",{})})}}}]);
+//# sourceMappingURL=8529.bdb39d64.chunk.js.map

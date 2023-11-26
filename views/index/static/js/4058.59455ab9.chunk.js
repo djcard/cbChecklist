@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkcbChecklist=self.webpackChunkcbChecklist||[]).push([[4058],{4058:function(e,c,i){i.r(c);i(2791);var n=i(184);c.default=function(){return(0,n.jsx)("h1",{id:"kimWelcome",children:"Welcome! You've installed Kim Foundation"})}}}]);
+//# sourceMappingURL=4058.59455ab9.chunk.js.map

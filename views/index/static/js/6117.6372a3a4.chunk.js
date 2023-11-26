@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkcbChecklist=self.webpackChunkcbChecklist||[]).push([[6117],{6117:function(e,t,s){s.r(t);var u=s(2791),c=s(8026),d=s(9174),i=s(184),f={blarg:"dfgdfgfggf"};t.default=function(){return(0,u.useEffect)((function(){c.default.dispatch((0,d.updateTesting)({user:f})),c.default.dispatch((0,d.updateTesting)(f))}),[]),(0,i.jsx)("div",{id:"testredtest",children:(0,i.jsx)("div",{children:"Logout user?"})})}}}]);
+//# sourceMappingURL=6117.6372a3a4.chunk.js.map

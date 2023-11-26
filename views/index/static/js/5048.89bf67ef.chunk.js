@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkcbChecklist=self.webpackChunkcbChecklist||[]).push([[5048],{5048:function(e,l,i){i.r(l);i(2791);var s=i(184);l.default=function(e){return(0,s.jsx)("svg",{width:"1em",height:"1em",viewBox:"0 0 16 16",className:"bi bi-dash-circle-fill",fill:"currentColor",xmlns:"http://www.w3.org/2000/svg",id:"dashCircleFill",children:(0,s.jsx)("path",{fillRule:"evenodd",d:"M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4 7.5a.5.5 0 0 0 0 1h8a.5.5 0 0 0 0-1H4z"})})}}}]);
+//# sourceMappingURL=5048.89bf67ef.chunk.js.map

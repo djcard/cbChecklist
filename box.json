@@ -4,7 +4,8 @@
     "changelog":"",
     "contributors":[],
     "dependencies":{
-        "qb":"^9.5.0"
+        "qb":"^9.5.0",
+        "cbChecklist":"0.0.22"
     },
     "description":"",
     "devDependencies":{},
@@ -16,7 +17,8 @@
         "/tests/"
     ],
     "installPaths":{
-        "qb":"modules/qb/"
+        "qb":"modules/qb/",
+        "cbChecklist":"modules/cbChecklist/"
     },
     "instructions":"",
     "keywords":[],
@@ -58,5 +60,5 @@
         "watchPaths":"**.cfc"
     },
     "type":"modules",
-    "version":"0.0.22"
+    "version":"0.0.23"
 }

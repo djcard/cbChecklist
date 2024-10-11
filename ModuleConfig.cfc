@@ -28,13 +28,14 @@ component {
 	 */
 	function configure(){
 		// parent settings
-		parentSettings = {
+		parentSettings = {};
+
+		// module settings - stored in modules.name.settings
+		settings = {
+			"dbaseName"  : getSystemSetting( "dBaseName", "" ),
 			"appCode"    : getSystemSetting( "appCode", "" ),
 			"clientCode" : getSystemSetting( "clientCode", "" )
 		};
-
-		// module settings - stored in modules.name.settings
-		settings = { "dbaseName" : getSystemSetting( "dBaseName", "" ) };
 
 		// Layout Settings
 		layoutSettings = { defaultLayout : "" };

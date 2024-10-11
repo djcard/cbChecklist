@@ -1,5 +1,5 @@
 <cfset basePath = "/cbChecklist/views/index/static/js" />
-<div id="28A825A6-60DF-4C79-B146EB07566E238B" style="width:100%;max-width:100%;height:100%;max-height:100%;backgroundColor: white; overflow: auto"></div>
+<div id="cbChecklistRoot" style="width:100%;max-width:100%;height:100%;max-height:100%;backgroundColor: white; overflow: auto"></div>
 
 <cfset fileName = directorylist(expandPath(basePath)).filter(function(item){
     var path = item.replace("\","/","all");

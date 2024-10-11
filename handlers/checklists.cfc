@@ -1,8 +1,8 @@
 component extends="coldbox.system.restHandler" {
 
 	property name="qb"               inject="provider:QueryBuilder@qb";
-	property name="clientCode"       inject="coldbox:setting:clientCode";
-	property name="appCode"          inject="coldbox:setting:appCode";
+	property name="clientCode"       inject="coldbox:moduleSettings:cbChecklist:clientCode";
+	property name="appCode"          inject="coldbox:moduleSettings:cbChecklist:appCode";
 	property name="checklistService" inject="checklists@cbChecklist";
 
 	// Place your content here
@@ -11,11 +11,15 @@ component extends="coldbox.system.restHandler" {
 	}
 
 	function save( event, rc, prc ){
-		arguments.rc.item.appCode    = appCode;
-		arguments.rc.item.clientCode = clientCode;
-		var itemid                   = rc.item.keyExists( "id" ) ? rc.item.id : "";
+		param rc.item.appCode    = appCode;
+		param rc.item.clientCode = clientCode;
+		param rc.item.active     = 1;
+		param rc.item.isDeleted  = 1;
+		var itemid               = rc.item.keyExists( "id" ) && rc.item.id.len() ? rc.item.id : "";
 		arguments.rc.item.delete( "isDirty" );
 		arguments.rc.item.delete( "id" );
+		arguments.rc.item.delete( "statusName" );
+
 		checklistService.updateChecklist( itemid, rc.item );
 		prc.response.setData( checklistService.checklists() );
 	}

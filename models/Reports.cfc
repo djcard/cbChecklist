@@ -4,8 +4,8 @@ component {
 	property name="mergeDOCXtoPDF"   inject="mergeDOCXtoPDF@adobePDFRest";
 	property name="targetService"    inject="targets@cbChecklist";
 	property name="resultService"    inject="results@cbChecklist";
-	property name="clientCode"       inject="coldbox:setting:clientCode";
-	property name="appCode"          inject="coldbox:setting:appCode";
+	property name="clientCode"       inject="coldbox:moduleSettings:cbChecklist:clientCode";
+	property name="appCode"          inject="coldbox:moduleSettings:cbChecklist:appCode";
 
 	function createReport( checklistUUID ){
 		var checkListDetails = checklistService.checklists( checklistUUID )[ 1 ];
@@ -48,8 +48,8 @@ component {
 				count         = count + 1;
 				target.result = results.keyExists( target.id ) && results[ target.id ] == 1 ? "Done" : "";
 				retme.append( {
-					"testpackage" : indentStr & count & ". " & target.testpackage,
-					"result"      : target.result
+					"targetid" : indentStr & count & ". " & target.targetid,
+					"result"   : target.result
 				} );
 				retme.append( createNodes( allTargets, target.id, results, indent + 1 ), true );
 			}
@@ -60,8 +60,8 @@ component {
 	function createResultsDictionary( data ){
 		var retme = {};
 		data.each( function( item ){
-			retme[ item.testpackage ]                  = retme.keyExists( item.testpackage ) ? retme[ item.testpackage ] : {};
-			retme[ item.testpackage ][ item.goaluuid ] = item.result;
+			retme[ item.targetid ]                = retme.keyExists( item.targetid ) ? retme[ item.targetid ] : {};
+			retme[ item.targetid ][ item.goalid ] = item.result;
 		} );
 
 		return retme;
@@ -70,7 +70,7 @@ component {
 	function createFlattenedResultsDictionary( data ){
 		var retme = {};
 		data.each( function( item ){
-			retme[ item.testpackage ] = retme.keyExists( item.testpackage ) ? retme[ item.testpackage ] : item.result
+			retme[ item.targetid ] = retme.keyExists( item.targetid ) ? retme[ item.targetid ] : item.result
 		} );
 
 		return retme;

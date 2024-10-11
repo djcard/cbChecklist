@@ -1,8 +1,8 @@
 component extends="coldbox.system.restHandler" {
 
 	property name="qb"          inject="provider:QueryBuilder@qb";
-	property name="clientCode"  inject="coldbox:setting:clientCode";
-	property name="appCode"     inject="coldbox:setting:appCode";
+	property name="clientCode"  inject="coldbox:moduleSettings:cbChecklist:clientCode";
+	property name="appCode"     inject="coldbox:moduleSettings:cbChecklist:appCode";
 	property name="goalService" inject="goals@cbChecklist";
 
 	void function show( event, rc, prc ){

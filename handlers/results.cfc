@@ -1,8 +1,8 @@
 component extends="coldbox.system.restHandler" {
 
 	property name="qb"            inject="provider:QueryBuilder@qb";
-	property name="clientCode"    inject="coldbox:setting:clientCode";
-	property name="appCode"       inject="coldbox:setting:appCode";
+	property name="clientCode"    inject="coldbox:moduleSettings:cbChecklist:clientCode";
+	property name="appCode"       inject="coldbox:moduleSettings:cbChecklist:appCode";
 	property name="resultService" inject="Results@cbChecklist";
 
 	void function show( event, rc, prc ){
@@ -16,8 +16,8 @@ component extends="coldbox.system.restHandler" {
 				function( q ){
 					q.where( "appCode", appCode )
 						.andWhere( "clientCode", clientCode )
-						.andWhere( "goaluuid", rc.goal )
-						.andWhere( "testpackage", rc.target )
+						.andWhere( "goalid", rc.goal )
+						.andWhere( "targetid", rc.target )
 						.andWhere( "checklistuuid", rc.checklistUUID )
 						.update( values = { result : rc.result }, options = { datasource : "packaging" } );
 				},
@@ -25,8 +25,8 @@ component extends="coldbox.system.restHandler" {
 					q.insert(
 						values = {
 							checklistuuid : rc.checklistuuid,
-							goaluuid      : rc.goal,
-							testpackage   : rc.target,
+							goalid        : rc.goal,
+							targetid      : rc.target,
 							result        : rc.result,
 							active        : 1,
 							appCode       : appCode,
@@ -44,9 +44,9 @@ component extends="coldbox.system.restHandler" {
 			.from( "checklistResults" )
 			.where( "appCode", appCode )
 			.andWhere( "clientCode", clientCode )
-			.andWhere( "testpackage", target )
+			.andWhere( "targetid", target )
 			.andWhere( "checklistuuid", checklistUUID )
-			.andWhere( "goaluuid", goal )
+			.andWhere( "goalid", goal )
 			.exists( options = { datasource : "packaging" } );
 	}
 
